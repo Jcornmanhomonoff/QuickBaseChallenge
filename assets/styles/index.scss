@@ -2,11 +2,14 @@
 
 body {
   background-color: $black;
+  font-family: helvetica;
 }
 
-
-.form-holder {
-  background-color: rgb(129, 26, 233);
-  width: 50vw;
-  padding: 50px;
+form {
+  background-color: $white;
+  border-radius: 10px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
+  width: 40vw;
 }
