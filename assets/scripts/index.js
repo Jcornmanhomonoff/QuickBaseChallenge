@@ -7,16 +7,15 @@
 require('./example');
 
 const validate = require('./validate');
-// const getFormFields = require('../../lib/get-form-fields');
-
 const mockService = require('../../js/MockService');
 
-
+//create empty array for choices to be pushed into
 let choices = [];
 
 $('#fieldBuilder').on('submit', function(event) {
   //creating variables to place in data for JSON object
-  //take value of input id & store to variable
+
+  //checking validation of label input
   validate.validateForm();
   let label = $('#labelInput').val();
   let defaultVal = $('#valueInput').val();
@@ -24,9 +23,10 @@ $('#fieldBuilder').on('submit', function(event) {
   //creating empty array, check value of each input
   //if value isn't null, add item to the array
 
+  //pushing value of default value input into choices array
   choices.push(defaultVal);
   console.log(choices);
-
+  //alphabetical list of choices
   choices.sort();
   let formData = {
     'label': label,
@@ -38,4 +38,9 @@ $('#fieldBuilder').on('submit', function(event) {
   //prevents page from reloading on submit
   event.preventDefault();
   mockService.FieldService.saveField(mockService.success, mockService.failure, formData);
+});
+
+//Resets form
+$('.cancel').on('click', function() {
+  document.getElementById("fieldBuilder").reset();
 });

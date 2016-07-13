@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <title>Field Builder</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
+
+<head>
+  <title>Field Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
 
-    <body class="container-fluid">
-      <form class="form-horizontal" id="fieldBuilder">
-        <div class="form-group">
-          <label for="labelInput" class="col-sm-2 control-label">Label</label>
-          <div class="col-xs-7">
-            <input type="text" class="form-control" id="labelInput" placeholder="Sales Region">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-sm-2 control-label">Type</label>
-          <div class="col-xs-7">
-            <p class="form-control-static">Multi-select Text
-              <input type="checkbox" checked="checked" disabled> A value is required
-            </p>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="valueInput" class="col-sm-2 control-label">Default Value</label>
-          <div class="col-xs-7">
-            <input type="text" class="form-control" id="valueInput" placeholder="North America">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="choicesInput" class="col-sm-2 control-label">Choices</label>
-          <div class="col-xs-7" id="choicesInput">
-            <!--MAX 50 OPTIONS-->
-            <select multiple class="form-control choicesClass" data-max-options="50">
-              <ul class="choicesList">
-              </ul>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="orderInput" class="col-sm-2 control-label">Order</label>
-          <div class="col-xs-7">
-            <select class="form-control">
-              <option>Display choices in alphabetical order</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Save changes</button> or <span class="cancel">Cancel</span>
-          </div>
-        </div>
-        <div class="alert alert-danger col-xs-7" role="alert" style="display: none">
-          Label is required
-        </div>
-      </form>
-    </body>
+<body class="container-fluid">
+  <form class="form-horizontal" id="fieldBuilder">
+    <div class="form-group">
+      <label for="labelInput" class="col-sm-2 control-label">Label</label>
+      <div class="col-xs-7">
+        <input type="text" class="form-control" id="labelInput" placeholder="Sales Region">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Type</label>
+      <div class="col-xs-7">
+        <p class="form-control-static">Multi-select Text
+          <input type="checkbox" checked="checked" disabled> A value is required
+        </p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="valueInput" class="col-sm-2 control-label">Default Value</label>
+      <div class="col-xs-7">
+        <input type="text" class="form-control" id="valueInput" placeholder="North America">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="choicesInput" class="col-sm-2 control-label">Choices</label>
+      <div class="col-xs-7" id="choicesInput">
+        <!--MAX 50 OPTIONS-->
+        <select multiple class="form-control choicesClass" data-max-options="50">
+          <ul class="choicesList">
+          </ul>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="orderInput" class="col-sm-2 control-label">Order</label>
+      <div class="col-xs-7">
+        <select class="form-control">
+          <option>Display choices in alphabetical order</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Save changes</button> or <a href="#" class="cancel">Cancel</a>
+      </div>
+    </div>
+    <div class="alert alert-danger col-xs-7" role="alert" style="display: none">
+      Label is required
+    </div>
+  </form>
+</body>
+
 </html>

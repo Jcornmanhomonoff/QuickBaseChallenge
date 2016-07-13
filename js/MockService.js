@@ -11,39 +11,39 @@ const failure = (error) => {
 };
 
 
-var FieldService =  {
-	getField: function(id) {
-		return {
-		  "label": "Sales region",
-		  "required": false,
-		  "choices": [
-			"Asia",
-			"Australia",
-			"Western Europe",
-			"North America",
-			"Eastern Europe",
-			"Latin America",
-			"Middle East and Africa"
-		  ],
-		  "displayAlpha": true,
-		  "default": "North America"
-		};
-	},
+var FieldService = {
+  getField: function(id) {
+    return {
+      "label": "Sales region",
+      "required": false,
+      "choices": [
+        "Asia",
+        "Australia",
+        "Western Europe",
+        "North America",
+        "Eastern Europe",
+        "Latin America",
+        "Middle East and Africa"
+      ],
+      "displayAlpha": true,
+      "default": "North America"
+    };
+  },
 
-	saveField: function (succes, fail, data) {
-		console.log(data);
-	  $.ajax({
-	    method:'POST',
-	    url: "https://httpbin.org/post",
-	    data: data
-	  })
-	  .done(success)
-	  .fail(failure);
-	}
+  saveField: function(succes, fail, data) {
+    console.log(data);
+    $.ajax({
+        method: 'POST',
+        url: "https://httpbin.org/post",
+        data: data
+      })
+      .done(success)
+      .fail(failure);
+  }
 };
 
 module.exports = {
-	FieldService,
-	success,
-	failure,
+  FieldService,
+  success,
+  failure,
 };
