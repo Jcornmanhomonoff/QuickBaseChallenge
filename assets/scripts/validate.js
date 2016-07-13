@@ -9,6 +9,10 @@ const validateForm = function(){
 };
 
 
+// const checkLength = function(){
+//   let x = document.forms["fieldBuilder"]["choicesInput"].value;
+//   if (x.length > )
+// }
 
 module.exports = {
   validateForm,

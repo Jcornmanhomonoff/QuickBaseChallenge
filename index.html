@@ -20,7 +20,7 @@
           <label class="col-sm-2 control-label">Type</label>
           <div class="col-xs-7">
             <p class="form-control-static">Multi-select Text
-              <input type="checkbox" checked="checked" disabled> Remember me
+              <input type="checkbox" checked="checked" disabled> A value is required
             </p>
           </div>
         </div>
@@ -34,7 +34,9 @@
           <label for="choicesInput" class="col-sm-2 control-label">Choices</label>
           <div class="col-xs-7" id="choicesInput">
             <!--MAX 50 OPTIONS-->
-            <select multiple class="form-control" data-max-options="50">
+            <select multiple class="form-control choicesClass" data-max-options="50">
+              <ul class="choicesList">
+              </ul>
             </select>
           </div>
         </div>

@@ -12,7 +12,9 @@ const validate = require('./validate');
 const mockService = require('../../js/MockService');
 
 
-$('#fieldBuilder').on('submit', function (event) {
+let choices = [];
+
+$('#fieldBuilder').on('submit', function(event) {
   //creating variables to place in data for JSON object
   //take value of input id & store to variable
   validate.validateForm();
@@ -21,14 +23,10 @@ $('#fieldBuilder').on('submit', function (event) {
   //multiple selections for choices FieldService
   //creating empty array, check value of each input
   //if value isn't null, add item to the array
-  let choices = [];
-  	$('#choicesInput').each(function(){
-  		if($(this).val() !== null){
-  			choices.push($(this).val());
-  		} else {
-  			return console.log("nothing to add");
-  		}
-  	});
+
+  choices.push(defaultVal);
+  console.log(choices);
+
   choices.sort();
   let formData = {
     'label': label,
