@@ -1,3 +1,16 @@
+'use strict';
+
+
+const success = (data) => {
+  console.log(data);
+};
+
+//so that code doesn't fail silently
+const failure = (error) => {
+  console.error(error);
+};
+
+
 var FieldService =  {
 	getField: function(id) {
 		return {
@@ -14,9 +27,23 @@ var FieldService =  {
 		  ],
 		  "displayAlpha": true,
 		  "default": "North America"
-		}
+		};
 	},
-	saveField: function (fieldJson) {
-		// Add the code here to call the API (or temporarily, just log fieldJson to the console)
+
+	saveField: function (succes, fail, data) {
+		console.log(data);
+	  $.ajax({
+	    method:'POST',
+	    url: "https://httpbin.org/post",
+	    data: data
+	  })
+	  .done(success)
+	  .fail(failure);
 	}
-}
+};
+
+module.exports = {
+	FieldService,
+	success,
+	failure,
+};

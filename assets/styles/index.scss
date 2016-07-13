@@ -1,3 +1,5 @@
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'colors';
 
 body {
@@ -11,5 +13,6 @@ form {
   padding-bottom: 50px;
   padding-left: 50px;
   padding-top: 50px;
+  // width: 580px;
   width: 40vw;
 }
