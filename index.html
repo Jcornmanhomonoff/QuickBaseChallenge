@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <title>Example</title>
+      <title>Field Builder</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
@@ -48,8 +48,11 @@
         </div>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Save changes</button> or <span>Cancel</span>
+            <button type="submit" class="btn btn-default">Save changes</button> or <span class="cancel">Cancel</span>
           </div>
+        </div>
+        <div class="alert alert-danger col-xs-7" role="alert" style="display: none">
+          Label is required
         </div>
       </form>
     </body>
